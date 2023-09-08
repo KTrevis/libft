@@ -1,7 +1,19 @@
-#ifndef LIBFT_H
-#define LIBFT_H
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ketrevis <ketrevis@student42.fr>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/08 20:52:35 by ketrevis          #+#    #+#             */
+/*   Updated: 2023/09/08 20:59:41 by ketrevis         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <stdlib.h>
+#ifndef LIBFT_H
+# define LIBFT_H
+
+# include <stdlib.h>
 
 int		ft_isprint(int c);
 int		ft_isalpha(int c);
@@ -12,8 +24,8 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_strlen(char *str);
-char		*ft_strchr(const char *s, int c);
-char		*ft_strrchr(const char *s, int c);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 #endif

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strings_modif.c                                    :+:      :+:    :+:   */
+/*   strings_manip.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ketrevis <ketrevis@student42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/26 19:08:49 by ketrevis          #+#    #+#             */
-/*   Updated: 2023/09/08 19:51:57 by ketrevis         ###   ########.fr       */
+/*   Updated: 2023/09/08 21:01:25 by ketrevis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,17 +54,20 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	return (dst_len + src_len);
 }
 
+char	*ft_strdup(const char *s)
+{
+	char	*dup;
+	int		i;
+	int		s_len;
 
-// #include <stdio.h>
-// #include <bsd/string.h>
-//
-// int	main(int ac, char **av)
-// {
-// 	(void)ac;
-// 	char dest1[100];
-// 	char dest2[100];
-// 	ft_strlcpy(dest1, av[2], ft_strlen(av[1]) + 1);
-// 	ft_strlcpy(dest2, av[2], ft_strlen(av[1]) + 1);
-// 	printf("mine : %zu %s\n", ft_strlcat(dest1, av[1], atoi(av[3])), dest1);
-// 	printf("original : %zu %s\n", strlcat(dest2, av[1], atoi(av[3])), dest2);
-// }
+	s_len = ft_strlen((char *)s);
+	dup = malloc((s_len + 1) * sizeof(char));
+	i = 0;
+	while (i < s_len)
+	{
+		dup[i] = s[i];
+		i++;
+	}
+	dup[i] = '\0';
+	return (dup);
+}

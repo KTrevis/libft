@@ -1,3 +1,6 @@
+TODOS
+
+Part 1 :
 - [ ] memset
 - [ ] bzero
 - [ ] memcpy
@@ -20,7 +23,5 @@
 - [x] strlcat
 - [x] strnstr
 - [x] atoi
-
-malloc:
 - [ ] calloc
-- [ ] strdup
+- [x] strdup
