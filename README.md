@@ -1,10 +1,10 @@
-## TODOS
+# TODOS
 
-### Part 1 :
-- [ ] memset
-- [ ] bzero
-- [ ] memcpy
-- [ ] memccpy
+## Part 1 :
+- [x] memset
+- [x] bzero
+- [x] memcpy
+- [x] memccpy
 - [ ] memmove
 - [ ] memchr
 - [ ] memcmp
@@ -25,3 +25,8 @@
 - [x] atoi
 - [ ] calloc
 - [x] strdup
+
+## Part 2
+
+
+## Bonus Part
