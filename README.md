@@ -1,6 +1,6 @@
 ## TODOS
 
-Part 1 :
+### Part 1 :
 - [ ] memset
 - [ ] bzero
 - [ ] memcpy
