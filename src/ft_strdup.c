@@ -6,7 +6,7 @@
 /*   By: ketrevis <ketrevis@student42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/26 19:08:49 by ketrevis          #+#    #+#             */
-/*   Updated: 2023/09/09 14:29:32 by ketrevis         ###   ########.fr       */
+/*   Updated: 2023/09/09 15:45:13 by ketrevis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,10 @@ char	*ft_strdup(const char *s)
 	int		s_len;
 
 	s_len = ft_strlen((char *)s);
-	dup = malloc((s_len + 1) * sizeof(char));
 	i = 0;
+	dup = malloc((s_len + 1) * sizeof(char));
+	if (!dup)
+		return (dup);
 	while (i < s_len)
 	{
 		dup[i] = s[i];
