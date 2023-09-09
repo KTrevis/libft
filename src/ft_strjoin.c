@@ -6,7 +6,7 @@
 /*   By: ketrevis <ketrevis@student42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 15:07:02 by ketrevis          #+#    #+#             */
-/*   Updated: 2023/09/09 16:56:07 by ketrevis         ###   ########.fr       */
+/*   Updated: 2023/09/09 18:01:35 by ketrevis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	size;
 	int		i;
 
-	size = ft_strlen((char *)s1) + ft_strlen((char *)s2) + 1;
+	size = ft_strlen(s1) + ft_strlen(s2) + 1;
 	i = 0;
 	str = malloc(size * sizeof(char));
 	if (!str)

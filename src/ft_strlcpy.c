@@ -6,7 +6,7 @@
 /*   By: ketrevis <ketrevis@student42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 14:31:35 by ketrevis          #+#    #+#             */
-/*   Updated: 2023/09/09 14:31:35 by ketrevis         ###   ########.fr       */
+/*   Updated: 2023/09/09 18:01:58 by ketrevis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		i++;
 	}
 	dst[i] = '\0';
-	return (ft_strlen((char *)src));
+	return (ft_strlen(src));
 }

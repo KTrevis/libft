@@ -6,7 +6,7 @@
 /*   By: ketrevis <ketrevis@student42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 14:29:37 by ketrevis          #+#    #+#             */
-/*   Updated: 2023/09/09 14:51:14 by ketrevis         ###   ########.fr       */
+/*   Updated: 2023/09/09 18:02:28 by ketrevis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 
-	i = ft_strlen((char *)s);
+	i = ft_strlen(s);
 	while (i >= 0 && s[i] != c)
 		i--;
 	if (s[i] == c)

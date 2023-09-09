@@ -1,40 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ketrevis <ketrevis@student42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/09 14:29:12 by ketrevis          #+#    #+#             */
-/*   Updated: 2023/09/09 18:02:38 by ketrevis         ###   ########.fr       */
+/*   Created: 2023/09/09 17:53:37 by ketrevis          #+#    #+#             */
+/*   Updated: 2023/09/09 18:02:14 by ketrevis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	i;
-	size_t	j;
-	size_t	src_len;
-	size_t	dst_len;
+	int	i;
+	int	len;
+	char	*str;
 
-	i = ft_strlen(dst);
-	j = 0;
-	src_len = ft_strlen(src);
-	dst_len = ft_strlen(dst);
-	if (i >= size)
-		return (size + src_len);
-	if (src_len < size - i)
+	if (!s || !f)
+		return (NULL);
+	i = 0;
+	str = malloc((ft_strlen(s) + 1) * sizeof(char));
+	if (!str)
+		return (NULL);
+	while (s[i])
 	{
-		while (src[j])
-			dst[i++] = src[j++];
-		dst[i] = '\0';
+		str[i] = f(i, s[i]);
+		i++;
 	}
-	else 
-	{
-		while (src[j] && j < size - dst_len - 1)
-			dst[i++] = src[j++];
-	}
-	return (dst_len + src_len);
+	str[i] = '\0';
+	return (str);
 }
