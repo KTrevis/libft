@@ -1,37 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ketrevis <ketrevis@student42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/09 18:45:54 by ketrevis          #+#    #+#             */
-/*   Updated: 2023/09/09 18:45:55 by ketrevis         ###   ########.fr       */
+/*   Created: 2023/09/09 19:00:38 by ketrevis          #+#    #+#             */
+/*   Updated: 2023/09/09 19:05:30 by ketrevis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(char *str)
+t_list	*ft_lstnew(void *content)
 {
-	int	n;
-	int	sign;
+	t_list	*curr;
 
-	n = 0;
-	sign = 1;
-	while (*str && ((*str >= 9 && *str <= 13) || *str == ' '))
-		str++;
-	if (*str == '-')
-	{
-		sign = -sign;
-		str++;
-	}
-	if (*str == '+')
-		str++;
-	while (*str && *str >= '0' && *str <= '9')
-	{
-		n = n * 10 + *str - '0';
-		str++;
-	}
-	return (n * sign);
+	curr = malloc(sizeof(t_list));
+	curr->next = NULL;
+	curr->content = content;
+	return (curr);
 }
