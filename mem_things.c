@@ -6,7 +6,7 @@
 /*   By: ketrevis <ketrevis@student42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 21:15:24 by ketrevis          #+#    #+#             */
-/*   Updated: 2023/09/09 09:01:57 by ketrevis         ###   ########.fr       */
+/*   Updated: 2023/09/09 09:13:31 by ketrevis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,7 +126,11 @@ void	*ft_calloc(size_t nmemb, size_t size)
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	int	i;
+	char	*tmp_src;
+	char	*tmp_dest;
 
 	i = 0;
+	tmp_src = (char *)src;
+	tmp_dest = (char *)dest;
 	return (dest);
 }
