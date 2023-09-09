@@ -6,7 +6,7 @@
 /*   By: ketrevis <ketrevis@student42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 14:29:37 by ketrevis          #+#    #+#             */
-/*   Updated: 2023/09/09 14:29:38 by ketrevis         ###   ########.fr       */
+/*   Updated: 2023/09/09 14:51:14 by ketrevis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if (tmp[i] == (unsigned char)c)
-			return ((void *)&s[i]);
+			return ((void *)&tmp[i]);
 		i++;
 	}
 	return (NULL);
