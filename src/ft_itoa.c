@@ -1,5 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ketrevis <ketrevis@student42.fr>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/09 18:14:40 by ketrevis          #+#    #+#             */
+/*   Updated: 2023/09/09 18:14:53 by ketrevis         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-#include <stdio.h>
 
 static int	nbr_len(int n)
 {
@@ -22,7 +33,7 @@ static int	nbr_len(int n)
 char	*ft_itoa(int n)
 {
 	char	*str;
-	int	i;
+	int		i;
 
 	i = nbr_len(n);
 	str = malloc((i + 1) * sizeof(char));

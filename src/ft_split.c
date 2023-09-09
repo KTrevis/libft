@@ -1,5 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ketrevis <ketrevis@student42.fr>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/09 18:13:49 by ketrevis          #+#    #+#             */
+/*   Updated: 2023/09/09 18:14:33 by ketrevis         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-#include <stdio.h>
 
 static int	count_words(char const *s, char c)
 {
@@ -19,7 +30,7 @@ static int	count_words(char const *s, char c)
 
 static char	*new_word(char const *s, char c)
 {
-	int	i;
+	int		i;
 	char	*str;
 
 	i = 0;
@@ -27,6 +38,8 @@ static char	*new_word(char const *s, char c)
 		i++;
 	str = malloc((i + 1) * sizeof(char));
 	i = 0;
+	if (!str)
+		return (NULL);
 	while (s[i] && s[i] != c)
 	{
 		str[i] = s[i];
@@ -38,9 +51,9 @@ static char	*new_word(char const *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	char **strs;
-	int	i;
-	int	j;
+	char	**strs;
+	int		i;
+	int		j;
 
 	strs = malloc((count_words(s, c) + 1) * sizeof(char *));
 	i = 0;

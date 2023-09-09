@@ -6,7 +6,7 @@
 /*   By: ketrevis <ketrevis@student42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 17:53:37 by ketrevis          #+#    #+#             */
-/*   Updated: 2023/09/09 18:02:14 by ketrevis         ###   ########.fr       */
+/*   Updated: 2023/09/09 18:12:56 by ketrevis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int	i;
-	int	len;
+	int		i;
 	char	*str;
 
 	if (!s || !f)

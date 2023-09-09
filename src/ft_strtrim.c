@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ketrevis <ketrevis@student42.fr>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/09 18:12:02 by ketrevis          #+#    #+#             */
+/*   Updated: 2023/09/09 18:12:25 by ketrevis         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static int	not_in_set(char c, char const *set)
@@ -28,7 +40,7 @@ static size_t	get_size(char const *s1, char const *set)
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;
-	int	i;
+	int		i;
 
 	i = 0;
 	str = malloc((get_size(s1, set) + 1) * sizeof(char));

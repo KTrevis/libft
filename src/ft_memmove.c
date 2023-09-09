@@ -6,7 +6,7 @@
 /*   By: ketrevis <ketrevis@student42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 12:40:08 by ketrevis          #+#    #+#             */
-/*   Updated: 2023/09/09 14:51:37 by ketrevis         ###   ########.fr       */
+/*   Updated: 2023/09/09 18:13:35 by ketrevis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t		i;
-	char	*tmp_src;
-	char	*tmp_dst;
+	char		*tmp_src;
+	char		*tmp_dst;
 
 	i = 0;
 	tmp_src = (char *)src;
