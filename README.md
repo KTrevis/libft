@@ -6,8 +6,8 @@
 - [x] memcpy
 - [x] memccpy
 - [ ] memmove
-- [ ] memchr
-- [ ] memcmp
+- [x] memchr
+- [x] memcmp
 - [x] strlen
 - [x] isalpha
 - [x] isdigit
@@ -23,7 +23,7 @@
 - [x] strlcat
 - [x] strnstr
 - [x] atoi
-- [ ] calloc
+- [x] calloc
 - [x] strdup
 
 ## Part 2
