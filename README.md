@@ -27,6 +27,15 @@
 - [x] strdup
 
 ## Part 2
-
+- [x] substr
+- [x] strjoin
+- [x] strtrim
+- [x] split
+- [x] itoa
+- [ ] strmapi
+- [ ] ft_putchar_fd
+- [ ] ft_putstr_fd
+- [ ] ft_putendl_fd
+- [ ] ft_putnbr_fd
 
 ## Bonus Part
