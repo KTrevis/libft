@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   mem_fill.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ketrevis <ketrevis@student42.fr>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/09 10:51:09 by ketrevis          #+#    #+#             */
+/*   Updated: 2023/09/09 10:51:53 by ketrevis         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
@@ -17,7 +29,7 @@ void	*ft_memset(void *s, int c, size_t n)
 void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*tmp;
-	size_t	i;
+	size_t			i;
 
 	i = 0;
 	tmp = (unsigned char *)s;
@@ -27,5 +39,3 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-
-
