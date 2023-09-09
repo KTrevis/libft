@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mem_parsing.c                                      :+:      :+:    :+:   */
+/*   strings_parsing.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ketrevis <ketrevis@student42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/08 21:15:24 by ketrevis          #+#    #+#             */
+/*   Created: 2023/08/26 18:20:57 by ketrevis          #+#    #+#             */
 /*   Updated: 2023/09/09 11:02:41 by ketrevis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t				i;
-	const unsigned char	*tmp;
+	size_t	i;
 
 	i = 0;
-	tmp = s;
-	while (i < n)
-	{
-		if (tmp[i] == (unsigned char)c)
-			return ((void *)&s[i]);
+	while (s1[i] && s1[i] == s2[i] && i < n - 1)
 		i++;
-	}
-	return (NULL);
+	return (s1[i] - s2[i]);
 }
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
@@ -44,17 +38,4 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		i++;
 	}
 	return (0);
-}
-
-void	*ft_calloc(size_t nmemb, size_t size)
-{
-	void	*arr;
-
-	if (nmemb == 0 || size == 0)
-		return (NULL);
-	arr = malloc(nmemb * size);
-	if (!arr)
-		return (arr);
-	ft_bzero(arr, size);
-	return (arr);
 }

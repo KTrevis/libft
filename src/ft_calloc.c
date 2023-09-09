@@ -1,44 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strings_parsing.c                                  :+:      :+:    :+:   */
+/*   mem_parsing.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ketrevis <ketrevis@student42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/26 18:20:57 by ketrevis          #+#    #+#             */
+/*   Created: 2023/09/08 21:15:24 by ketrevis          #+#    #+#             */
 /*   Updated: 2023/09/09 11:02:41 by ketrevis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	while (*s && *s != c)
-		s++;
-	if (*s == c)
-		return ((char *)s);
-	return (NULL);
-}
+	void	*arr;
 
-char	*ft_strrchr(const char *s, int c)
-{
-	int	i;
-
-	i = ft_strlen((char *)s);
-	while (i >= 0 && s[i] != c)
-		i--;
-	if (s[i] == c)
-		return ((char *)&s[i]);
-	return (NULL);
-}
-
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
-{
-	size_t	i;
-
-	i = 0;
-	while (s1[i] && s1[i] == s2[i] && i < n - 1)
-		i++;
-	return (s1[i] - s2[i]);
+	if (nmemb == 0 || size == 0)
+		return (NULL);
+	arr = malloc(nmemb * size);
+	if (!arr)
+		return (arr);
+	ft_bzero(arr, size);
+	return (arr);
 }
