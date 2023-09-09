@@ -6,12 +6,11 @@
 /*   By: ketrevis <ketrevis@student42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/26 19:08:49 by ketrevis          #+#    #+#             */
-/*   Updated: 2023/09/08 21:01:25 by ketrevis         ###   ########.fr       */
+/*   Updated: 2023/09/09 12:22:43 by ketrevis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
