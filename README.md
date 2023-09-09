@@ -32,7 +32,7 @@
 - [x] strtrim
 - [x] split
 - [x] itoa
-- [ ] strmapi
+- [x] strmapi
 - [x] ft_putchar_fd
 - [x] ft_putstr_fd
 - [x] ft_putendl_fd
