@@ -12,16 +12,6 @@
 
 #include <stdlib.h>
 
-size_t	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
 char	*ft_strchr(const char *s, int c)
 {
 	while (*s && *s != c)
