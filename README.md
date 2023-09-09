@@ -5,7 +5,7 @@
 - [x] bzero
 - [x] memcpy
 - [x] memccpy
-- [ ] memmove
+- [x] memmove
 - [x] memchr
 - [x] memcmp
 - [x] strlen
@@ -23,7 +23,7 @@
 - [x] strlcat
 - [x] strnstr
 - [x] atoi
-- [x] calloc
+- [ ] calloc
 - [x] strdup
 
 ## Part 2
