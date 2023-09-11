@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 14:22:10 by marvin            #+#    #+#             */
-/*   Updated: 2023/09/11 16:39:28 by marvin           ###   ########.fr       */
+/*   Updated: 2023/09/11 17:04:28 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,17 +90,17 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *head;
+	t_list	*head;
 	t_list	*curr;
-	
-	head = ft_lstnew(lst->content);
+
+	head = ft_lstnew(f(lst->content));
 	curr = head;
-	while (lst != NULL)
+	while (lst->next != NULL)
 	{
 		if (del)
 			del(lst->content);
 		lst = lst->next;
-		curr->next = ft_lstnew(lst->content);
+		curr->next = ft_lstnew(f(lst->content));
 		curr = curr->next;
 	}
 	return (head);
@@ -111,6 +111,15 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 void	delete(void *content)
 {
 	free(content);
+}
+
+void	*f(void *content)
+{
+	int	*ptr;
+
+	ptr = (int *)content;
+	*ptr = -75;
+	return (content);
 }
 
 int main(int ac, char **av)
@@ -141,13 +150,13 @@ int main(int ac, char **av)
 		ft_lstadd_back(&head, new);
 	}
 
-	//ft_lstclear(&last, delete);
+	t_list *map = ft_lstmap(head, f, NULL);
 
 	t_list *curr = head;
-	while (curr != NULL)
+	while (map != NULL)
 	{
-		printf("%d\n", *(int *)(curr->content));
-		curr = curr->next;
+		printf("%d\n", *(int *)(map->content));
+		map = map->next;
 	}
 
 	return (0);

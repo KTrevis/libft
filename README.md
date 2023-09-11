@@ -45,6 +45,6 @@
 - [x] ft_lstadd_front
 - [x] ft_lstadd_back
 - [x] ft_lstdelone
-- [ ] ft_lstclear
-- [ ] ft_lstiter
-- [ ] ft_lstsize
+- [x] ft_lstclear
+- [x] ft_lstiter
+- [x] ft_lstsize
