@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 14:22:10 by marvin            #+#    #+#             */
-/*   Updated: 2023/09/11 14:52:13 by marvin           ###   ########.fr       */
+/*   Updated: 2023/09/11 15:01:51 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,12 +86,11 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		f(lst->content);
 		lst = lst->next;
 	}
-	ft_lstclear(&lst, f);
 }
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	
+
 }
 
 //------------------------
