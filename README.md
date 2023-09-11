@@ -39,12 +39,12 @@
 - [x] ft_putnbr_fd
 
 ## Bonus Part
-- [ ] ft_lstnew
-- [ ] ft_lstlast
-- [ ] ft_lstmap
-- [ ] ft_lstadd_front
-- [ ] ft_lstadd_back
-- [ ] ft_lstdelone
+- [x] ft_lstnew
+- [x] ft_lstlast
+- [x] ft_lstmap
+- [x] ft_lstadd_front
+- [x] ft_lstadd_back
+- [x] ft_lstdelone
 - [ ] ft_lstclear
 - [ ] ft_lstiter
 - [ ] ft_lstsize
