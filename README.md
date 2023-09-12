@@ -21,7 +21,7 @@
 - [x] strncmp
 - [x] strlcpy
 - [x] strlcat
-- [x] strnstr
+- [ ] strnstr
 - [x] atoi
 - [x] calloc
 - [x] strdup
@@ -33,18 +33,19 @@
 - [x] split
 - [x] itoa
 - [x] strmapi
-- [x] ft_putchar_fd
-- [x] ft_putstr_fd
-- [x] ft_putendl_fd
-- [x] ft_putnbr_fd
+- [ ] striteri
+- [x] putchar_fd
+- [x] putstr_fd
+- [x] putendl_fd
+- [x] putnbr_fd
 
 ## Bonus Part
-- [x] ft_lstnew
-- [x] ft_lstlast
-- [x] ft_lstmap
-- [x] ft_lstadd_front
-- [x] ft_lstadd_back
-- [x] ft_lstdelone
-- [x] ft_lstclear
-- [x] ft_lstiter
-- [x] ft_lstsize
+- [x] lstnew
+- [x] lstlast
+- [x] lstmap
+- [x] lstadd_front
+- [x] lstadd_back
+- [x] lstdelone
+- [x] lstclear
+- [x] lstiter
+- [x] lstsize

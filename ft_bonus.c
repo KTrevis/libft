@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 14:22:10 by marvin            #+#    #+#             */
-/*   Updated: 2023/09/11 17:04:28 by marvin           ###   ########.fr       */
+/*   Updated: 2023/09/11 18:48:32 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,42 +122,42 @@ void	*f(void *content)
 	return (content);
 }
 
-int main(int ac, char **av)
-{
-	int *val = malloc(sizeof(int));
-	*val = 10;
-	t_list *head = malloc(sizeof(t_list));
-	head->content = (void *)val;
-	head->next = NULL;
+// int main(int ac, char **av)
+// {
+// 	int *val = malloc(sizeof(int));
+// 	*val = 10;
+// 	t_list *head = malloc(sizeof(t_list));
+// 	head->content = (void *)val;
+// 	head->next = NULL;
 
-	for (int i = 0; i < 10; i++)
-	{
-		int *val = malloc(sizeof(int));
-		*val = i;
-		t_list *new = malloc(sizeof(t_list));
-		new->content = (void *)val;
-		ft_lstadd_front(&head, new);
-	}
+// 	for (int i = 0; i < 10; i++)
+// 	{
+// 		int *val = malloc(sizeof(int));
+// 		*val = i;
+// 		t_list *new = malloc(sizeof(t_list));
+// 		new->content = (void *)val;
+// 		ft_lstadd_front(&head, new);
+// 	}
 
-	t_list *last = ft_lstlast(head);
+// 	t_list *last = ft_lstlast(head);
 
-	for (int i = 11; i < 20; i++)
-	{
-		int *val = malloc(sizeof(int));
-		*val = i;
-		t_list *new = malloc(sizeof(t_list));
-		new->content = (void *)val;
-		ft_lstadd_back(&head, new);
-	}
+// 	for (int i = 11; i < 20; i++)
+// 	{
+// 		int *val = malloc(sizeof(int));
+// 		*val = i;
+// 		t_list *new = malloc(sizeof(t_list));
+// 		new->content = (void *)val;
+// 		ft_lstadd_back(&head, new);
+// 	}
 
-	t_list *map = ft_lstmap(head, f, NULL);
+// 	t_list *map = ft_lstmap(head, f, NULL);
 
-	t_list *curr = head;
-	while (map != NULL)
-	{
-		printf("%d\n", *(int *)(map->content));
-		map = map->next;
-	}
+// 	t_list *curr = head;
+// 	while (map != NULL)
+// 	{
+// 		printf("%d\n", *(int *)(map->content));
+// 		map = map->next;
+// 	}
 
-	return (0);
-}
+// 	return (0);
+// }
