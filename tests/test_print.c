@@ -3,7 +3,8 @@
 
 int main(int ac, char **av)
 {
-	ft_putchar_fd('a', 1);
-	ft_putstr_fd("ceci est un test", 1);
-	ft_putendl_fd("ceci est un test", 1);
+	ft_putchar_fd(av[1][0], 1);
+	ft_putstr_fd(av[1], 1);
+	ft_putendl_fd(av[1], 1);
+	ft_putnbr_fd(123, 1);
 }
