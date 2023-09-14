@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strings_parsing.c                                  :+:      :+:    :+:   */
+/*   ft_cmp.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ketrevis <ketrevis@student42.fr>           +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/26 18:20:57 by ketrevis          #+#    #+#             */
-/*   Updated: 2023/09/09 11:02:41 by ketrevis         ###   ########.fr       */
+/*   Updated: 2023/09/14 11:37:50 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	str1 = (unsigned char *)s1;
 	str2 = (unsigned char *)s2;
-	while (i < n)
-	{
-		if (str1[i] != str2[i])
-			return (str1[i] - str2[i]);
+	while (i < n && str1[i] == str2[i])
 		i++;
-	}
-	return (0);
+
+	return (str1[i] - str2[i]);
 }
