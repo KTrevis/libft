@@ -1,5 +1,10 @@
 # TODOS
 
+## Tests :
+- [x] Part 1
+- [x] Part 2
+- [ ] Bonu
+
 ## Part 1 :
 - [x] memset
 - [x] bzero
