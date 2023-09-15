@@ -4,5 +4,7 @@
 int	main(int ac, char **av)
 {
 	(void)ac;
-	printf("%s", ft_strjoin(av[1], av[2]));
+	char *str = ft_strjoin(av[1], av[2]);
+	printf("%s", str);
+	free(str);
 }

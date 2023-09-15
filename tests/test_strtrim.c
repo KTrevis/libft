@@ -4,5 +4,7 @@
 int	main(int ac, char **av)
 {
 	(void)ac;
-	printf("%s\n", ft_strtrim(av[1], av[2]));
+	char *str = ft_strtrim(av[1], av[2]);
+	printf("%s\n", str);
+	free(str);
 }

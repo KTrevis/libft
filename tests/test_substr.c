@@ -4,5 +4,7 @@
 int	main(int ac, char **av)
 {
 	(void)ac;
-	printf("%s\n", ft_substr(av[1], atoi(av[2]), atoi(av[3])));
+	char *str = ft_substr(av[1], ft_atoi(av[2]), ft_atoi(av[3]));
+	printf("%s\n", str);
+	free(str);
 }
