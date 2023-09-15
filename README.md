@@ -21,7 +21,7 @@
 - [x] strncmp
 - [x] strlcpy
 - [x] strlcat
-- [ ] strnstr
+- [x] strnstr
 - [x] atoi
 - [x] calloc
 - [x] strdup
@@ -33,7 +33,7 @@
 - [x] split
 - [x] itoa
 - [x] strmapi
-- [ ] striteri
+- [x] striteri
 - [x] putchar_fd
 - [x] putstr_fd
 - [x] putendl_fd
