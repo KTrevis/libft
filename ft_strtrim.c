@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ketrevis <ketrevis@student42.fr>           +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 18:12:02 by ketrevis          #+#    #+#             */
-/*   Updated: 2023/09/09 18:12:25 by ketrevis         ###   ########.fr       */
+/*   Updated: 2023/09/15 13:46:55 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,5 +55,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 		}
 		s1++;
 	}
+	str[i] = '\0';
 	return (str);
 }
