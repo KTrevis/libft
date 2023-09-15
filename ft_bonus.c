@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_bonus.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 14:22:10 by marvin            #+#    #+#             */
-/*   Updated: 2023/09/11 18:48:32 by marvin           ###   ########.fr       */
+/*   Updated: 2023/09/15 17:02:16 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,15 +31,6 @@ void	ft_lstadd_front(t_list **alst, t_list *new)
 	*alst = new;
 }
 
-void	ft_lstadd_back(t_list **alst, t_list *new)
-{
-	t_list	*curr;
-
-	curr = *alst;
-	while (curr->next != NULL)
-		curr = curr->next;
-	curr->next = new;
-}
 
 int	ft_lstsize(t_list *lst)
 {
@@ -56,15 +47,26 @@ int	ft_lstsize(t_list *lst)
 
 t_list	*ft_lstlast(t_list *lst)
 {
+	if (!lst)
+		return (NULL);
 	while (lst->next != NULL)
 		lst = lst->next;
 	return (lst);
 }
 
+void	ft_lstadd_back(t_list **alst, t_list *new)
+{
+	t_list	*curr;
+
+	curr = ft_lstlast(*alst);
+	if (!curr)
+		*alst = new;
+	curr->next = new;
+}
+
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (del)
-		del(lst->content);
+	del(lst->content);
 	free(lst);
 }
 
@@ -92,7 +94,9 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*head;
 	t_list	*curr;
-
+	
+	if (!lst || !f || !del)
+		return (NULL);
 	head = ft_lstnew(f(lst->content));
 	curr = head;
 	while (lst->next != NULL)
@@ -108,56 +112,36 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 
 //------------------------
 
-void	delete(void *content)
+void	f(void *content)
 {
-	free(content);
+	char	*tmp;
+	
+	tmp = (char *)content;
+	*tmp += 1;
 }
 
-void	*f(void *content)
+void	*f2(void *content)
 {
-	int	*ptr;
-
-	ptr = (int *)content;
-	*ptr = -75;
+	char	*tmp;
+	
+	tmp = (char *)content;
+	*tmp += 1;
+	return (content);
 	return (content);
 }
 
-// int main(int ac, char **av)
-// {
-// 	int *val = malloc(sizeof(int));
-// 	*val = 10;
-// 	t_list *head = malloc(sizeof(t_list));
-// 	head->content = (void *)val;
-// 	head->next = NULL;
-
-// 	for (int i = 0; i < 10; i++)
-// 	{
-// 		int *val = malloc(sizeof(int));
-// 		*val = i;
-// 		t_list *new = malloc(sizeof(t_list));
-// 		new->content = (void *)val;
-// 		ft_lstadd_front(&head, new);
-// 	}
-
-// 	t_list *last = ft_lstlast(head);
-
-// 	for (int i = 11; i < 20; i++)
-// 	{
-// 		int *val = malloc(sizeof(int));
-// 		*val = i;
-// 		t_list *new = malloc(sizeof(t_list));
-// 		new->content = (void *)val;
-// 		ft_lstadd_back(&head, new);
-// 	}
-
-// 	t_list *map = ft_lstmap(head, f, NULL);
-
-// 	t_list *curr = head;
-// 	while (map != NULL)
-// 	{
-// 		printf("%d\n", *(int *)(map->content));
-// 		map = map->next;
-// 	}
-
-// 	return (0);
-// }
+int main(void)
+{
+	t_list *head = ft_lstnew((void *)ft_strdup("10"));
+	ft_lstadd_front(&head, ft_lstnew((void *)ft_strdup("5")));
+	ft_lstadd_back(&head, ft_lstnew((void *)ft_strdup("-12")));
+	//ft_lstiter(head, f);
+	
+	t_list *map = ft_lstmap(head, f2, NULL);
+	while (map != NULL)
+	{
+		printf("%s\n", (char *)map->content);
+		map = map->next;
+	}
+	return (0);
+}
