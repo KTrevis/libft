@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   change_case.c                                      :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ketrevis <ketrevis@student42.fr>           +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/26 18:14:52 by ketrevis          #+#    #+#             */
-/*   Updated: 2023/08/26 18:29:54 by ketrevis         ###   ########.fr       */
+/*   Created: 2023/09/09 10:51:09 by ketrevis          #+#    #+#             */
+/*   Updated: 2023/09/15 12:27:42 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
-{
-	if (c < 'a' || c > 'z')
-		return (c);
-	return (c - 32);
-}
+#include "libft.h"
 
-int	ft_tolower(int c)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	if (c < 'A' || c > 'Z')
-		return (c);
-	return (c + 32);
+	unsigned char	*tmp;
+
+	tmp = s;
+	while (n > 0)
+	{
+		*tmp = (unsigned char)c;
+		tmp++;
+		n--;
+	}
+	return (s);
 }

@@ -3,5 +3,6 @@
 
 int main(int ac, char **av)
 {
+	(void)ac;
 	printf("%d\n", ft_atoi(av[1]));
 }
