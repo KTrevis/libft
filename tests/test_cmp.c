@@ -5,6 +5,7 @@
 
 int main(int ac, char **av)
 {
+	(void)ac;
 	printf("ft_memcmp : %d\n", ft_memcmp(av[1], av[2], atoi(av[3])));
 	printf("memcmp : %d\n", memcmp(av[1], av[2], atoi(av[3])));
 	printf("ft_strncmp : %d\n", ft_strncmp(av[1], av[2], atoi(av[3])));

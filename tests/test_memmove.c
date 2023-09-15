@@ -3,6 +3,7 @@
 
 int main(int ac, char **av)
 {
+	(void)ac;
     char src[] = "ceci est un test";
     char *dest = src - 1;
 

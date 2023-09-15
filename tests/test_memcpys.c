@@ -5,6 +5,7 @@
 
 int main(int ac, char **av)
 {
+	(void)ac;
     char *src = av[1];
     size_t size = (strlen(src) + 1);
     char *dest1 = malloc(size * sizeof(char));
