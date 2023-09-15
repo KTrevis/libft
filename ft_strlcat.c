@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 14:29:12 by ketrevis          #+#    #+#             */
-/*   Updated: 2023/09/10 17:01:12 by marvin           ###   ########.fr       */
+/*   Updated: 2023/09/15 10:39:59 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		while (src[j] && j < size - dst_len - 1)
 			dst[i++] = src[j++];
 	}
-	return (dst_len + src_len);
+	return (dst_len + src_len + 1);
 }

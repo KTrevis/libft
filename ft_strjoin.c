@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ketrevis <ketrevis@student42.fr>           +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 15:07:02 by ketrevis          #+#    #+#             */
-/*   Updated: 2023/09/09 18:16:26 by ketrevis         ###   ########.fr       */
+/*   Updated: 2023/09/15 10:27:51 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		s2++;
 		i++;
 	}
+	str[i] = '\0';
 	return (str);
 }

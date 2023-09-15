@@ -1,10 +1,10 @@
-#include "libft.h"
 #include <stdio.h>
+#include "libft.h"
 
 static void	f(unsigned int i, char *c)
 {
 	(void)i;
-	ft_toupper(*c);
+	*c = ft_toupper(*c);
 }
 
 int	main(int ac, char **av)
