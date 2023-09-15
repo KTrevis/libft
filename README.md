@@ -3,7 +3,7 @@
 ## Tests :
 - [x] Part 1
 - [x] Part 2
-- [ ] Bonu
+- [ ] Bonus
 
 ## Part 1 :
 - [x] memset
