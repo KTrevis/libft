@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mem_parsing.c                                      :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ketrevis <ketrevis@student42.fr>           +#+  +:+       +#+        */
+/*   By: ketrevis <ketrevist@42student.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/08 21:15:24 by ketrevis          #+#    #+#             */
-/*   Updated: 2023/09/09 11:02:41 by ketrevis         ###   ########.fr       */
+/*   Created: 2020/12/04 02:34:13 by molivier          #+#    #+#             */
+/*   Updated: 2023/10/04 17:14:59 by ketrevis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
-	void	*arr;
+	void	*ptr;
 
-	if (nmemb == 0 || size == 0)
+	ptr = malloc(count * size);
+	if (ptr == NULL)
 		return (NULL);
-	arr = malloc(nmemb * size);
-	if (!arr)
-		return (arr);
-	ft_bzero(arr, size);
-	return (arr);
+	ft_bzero(ptr, count * size);
+	return (ptr);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_find_byte.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ketrevis <ketrevist@42student.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 14:29:37 by ketrevis          #+#    #+#             */
-/*   Updated: 2023/09/11 18:53:24 by marvin           ###   ########.fr       */
+/*   Updated: 2023/10/04 16:21:43 by ketrevis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,13 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s && *s != c)
+	while (*s)
+	{
+		if (*s == (char)c)
+			return ((char *)s);
 		s++;
-	if (*s == c)
+	}
+	if (*s == (char)c)
 		return ((char *)s);
 	return (NULL);
 }
@@ -26,9 +30,9 @@ char	*ft_strrchr(const char *s, int c)
 	int	i;
 
 	i = ft_strlen(s);
-	while (i >= 0 && s[i] != c)
+	while (i > 0 && s[i] != (char)c)
 		i--;
-	if (s[i] == c)
+	if (s[i] == (char)c)
 		return ((char *)&s[i]);
 	return (NULL);
 }

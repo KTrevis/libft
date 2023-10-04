@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ketrevis <ketrevis@student42.fr>           +#+  +:+       +#+        */
+/*   By: ketrevis <ketrevist@42student.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 18:14:40 by ketrevis          #+#    #+#             */
-/*   Updated: 2023/09/09 18:19:30 by ketrevis         ###   ########.fr       */
+/*   Updated: 2023/10/04 18:17:57 by ketrevis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,19 @@
 static int	nbr_len(int n)
 {
 	int	size;
+	long	nb;
 
 	size = 1;
+	nb = (long)n;
 	if (n < 0)
 	{
-		n = -n;
+		nb = -nb;
 		size++;
 	}
-	while (n >= 10)
+	while (nb >= 10)
 	{
 		size++;
-		n /= 10;
+		nb /= 10;
 	}
 	return (size);
 }
@@ -34,26 +36,25 @@ char	*ft_itoa(int n)
 {
 	char	*str;
 	int		i;
+	long	nb;
 
 	i = nbr_len(n);
 	str = malloc((i + 1) * sizeof(char));
+	nb = (long)n;
 	if (!str)
 		return (NULL);
 	str[i--] = '\0';
 	if (n == 0)
-	{
 		str[i] = '0';
-		return (str);
-	}
 	if (n < 0)
 	{
-		n = -n;
+		nb = -nb;
 		str[0] = '-';
 	}
-	while (i >= 0 && n > 0)
+	while (i >= 0 && nb > 0)
 	{
-		str[i] = n % 10 + 48;
-		n /= 10;
+		str[i] = nb % 10 + 48;
+		nb /= 10;
 		i--;
 	}
 	return (str);
