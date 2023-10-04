@@ -1,41 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_find_byte.c                                     :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ketrevis <ketrevist@42student.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/09 14:29:37 by ketrevis          #+#    #+#             */
-/*   Updated: 2023/10/04 16:21:43 by ketrevis         ###   ########.fr       */
+/*   Created: 2023/10/04 23:51:06 by ketrevis          #+#    #+#             */
+/*   Updated: 2023/10/04 23:51:10 by ketrevis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-char	*ft_strchr(const char *s, int c)
-{
-	while (*s)
-	{
-		if (*s == (char)c)
-			return ((char *)s);
-		s++;
-	}
-	if (*s == (char)c)
-		return ((char *)s);
-	return (NULL);
-}
-
-char	*ft_strrchr(const char *s, int c)
-{
-	int	i;
-
-	i = ft_strlen(s);
-	while (i > 0 && s[i] != (char)c)
-		i--;
-	if (s[i] == (char)c)
-		return ((char *)&s[i]);
-	return (NULL);
-}
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
