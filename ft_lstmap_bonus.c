@@ -6,7 +6,7 @@
 /*   By: ketrevis <ketrevist@42student.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 09:45:30 by ketrevis          #+#    #+#             */
-/*   Updated: 2023/10/04 22:48:50 by ketrevis         ###   ########.fr       */
+/*   Updated: 2023/10/04 23:29:05 by ketrevis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*head;
 	t_list	*curr;
-	
+
 	if (!lst || !f || !del)
 		return (NULL);
 	head = ft_lstnew(f(lst->content));

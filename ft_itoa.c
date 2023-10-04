@@ -6,7 +6,7 @@
 /*   By: ketrevis <ketrevist@42student.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 18:14:40 by ketrevis          #+#    #+#             */
-/*   Updated: 2023/10/04 18:17:57 by ketrevis         ###   ########.fr       */
+/*   Updated: 2023/10/04 23:27:16 by ketrevis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	nbr_len(int n)
 {
-	int	size;
+	int		size;
 	long	nb;
 
 	size = 1;

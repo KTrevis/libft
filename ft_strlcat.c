@@ -6,7 +6,7 @@
 /*   By: ketrevis <ketrevist@42student.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 14:29:12 by ketrevis          #+#    #+#             */
-/*   Updated: 2023/10/04 16:53:11 by ketrevis         ###   ########.fr       */
+/*   Updated: 2023/10/04 23:27:49 by ketrevis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	dst_len;
 	size_t	src_len;
-	int			i;
-	int			res;
+	int		i;
+	int		res;
 
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
