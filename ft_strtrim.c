@@ -3,58 +3,61 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ketrevis <ketrevist@42student.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 18:12:02 by ketrevis          #+#    #+#             */
-/*   Updated: 2023/09/15 13:46:55 by marvin           ###   ########.fr       */
+/*   Updated: 2023/10/05 11:32:54 by ketrevis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-static int	not_in_set(char c, char const *set)
+static int	in_set(char const c, char const *set)
 {
 	while (*set)
 	{
 		if (c == *set)
-			return (0);
+			return (1);
 		set++;
 	}
-	return (1);
+	return (0);
 }
 
 static size_t	get_size(char const *s1, char const *set)
 {
-	size_t	size;
+	int	j;
+	int	i;
+	int	size;
 
-	size = 0;
-	while (*s1)
-	{
-		if (not_in_set(*s1, set))
-			size++;
-		s1++;
-	}
-	return (size);
+	j = ft_strlen(s1) - 1;
+	i = 0;
+	while (s1[i] && in_set(s1[i], set))
+		i++;
+	while (j >= 0 && in_set(s1[j], set))
+		j--;
+	size = ft_strlen(s1) - i;
+	size -= ft_strlen(s1) - j;
+	return (size + 1);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;
 	int		i;
+	int		j;
+	int		k;
 
-	i = 0;
 	str = malloc((get_size(s1, set) + 1) * sizeof(char));
-	if (!str)
-		return (NULL);
-	while (*s1)
-	{
-		if (not_in_set(*s1, set))
-		{
-			str[i] = *s1;
-			i++;
-		}
-		s1++;
-	}
-	str[i] = '\0';
+	i = ft_strlen(s1) - 1;
+	j = 0;
+	k = 0;
+	while (s1[j] && in_set(s1[j], set))
+		j++;
+	while (i >= 0 && in_set(s1[i], set))
+		i--;
+	while (j <= i)
+		str[k++] = s1[j++];
+	str[k] = '\0';
 	return (str);
 }

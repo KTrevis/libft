@@ -3,16 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ketrevis <ketrevis@42.student.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 12:21:52 by marvin            #+#    #+#             */
-/*   Updated: 2023/09/15 12:21:52 by marvin           ###   ########.fr       */
+/*   Updated: 2023/10/07 15:18:56 by ketrevis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_toupper(int c)
 {
-	if (c < 'a' || c > 'z')
-		return (c);
-	return (c - 32);
+	unsigned char	n;
+
+	n = (unsigned char)c;
+	if ((n < 'a' || n > 'z'))
+		return (n);
+	return (n - 32);
 }
