@@ -6,12 +6,11 @@
 /*   By: ketrevis <ketrevis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 18:12:02 by ketrevis          #+#    #+#             */
-/*   Updated: 2023/10/16 19:37:02 by ketrevis         ###   ########.fr       */
+/*   Updated: 2023/10/31 12:21:36 by ketrevis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	in_set(char const c, char const *set)
 {
