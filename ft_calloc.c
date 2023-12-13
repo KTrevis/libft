@@ -6,7 +6,7 @@
 /*   By: ketrevis <ketrevis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 19:27:43 by ketrevis          #+#    #+#             */
-/*   Updated: 2023/10/16 19:27:44 by ketrevis         ###   ########.fr       */
+/*   Updated: 2023/11/10 11:15:56 by ketrevis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,18 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void	*ptr;
+	char	*ptr;
+	size_t	i;
 
-	if (SIZE_MAX / count < size)
+	i = 0;
+	if (count == 0 || size == 0)
+		return (malloc(0));
+	if (count * size < size || count * size < count)
 		return (NULL);
 	ptr = malloc(count * size);
 	if (!ptr)
 		return (ptr);
-	ft_bzero(ptr, count * size);
+	while (i < count * size)
+		ptr[i++] = 0;
 	return (ptr);
 }

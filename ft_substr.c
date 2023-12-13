@@ -6,7 +6,7 @@
 /*   By: ketrevis <ketrevis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 15:06:59 by ketrevis          #+#    #+#             */
-/*   Updated: 2023/10/16 19:34:27 by ketrevis         ###   ########.fr       */
+/*   Updated: 2023/11/10 11:14:06 by ketrevis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		len = ft_strlen(s) - start;
 	str = malloc((len + 1) * sizeof(char));
 	if (!str)
-		return (NULL);
+		return (str);
 	while (s[start] && i < len)
 	{
 		str[i] = s[start];

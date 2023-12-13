@@ -6,7 +6,7 @@
 /*   By: ketrevis <ketrevis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 18:13:49 by ketrevis          #+#    #+#             */
-/*   Updated: 2023/10/16 19:34:12 by ketrevis         ###   ########.fr       */
+/*   Updated: 2023/12/04 15:55:28 by ketrevis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,9 @@ static char	*new_word(char const *s, char c)
 	while (s[i] && s[i] != c)
 		i++;
 	str = malloc((i + 1) * sizeof(char));
-	i = 0;
 	if (!str)
 		return (NULL);
+	i = 0;
 	while (s[i] && s[i] != c)
 	{
 		str[i] = s[i];
@@ -49,21 +49,39 @@ static char	*new_word(char const *s, char c)
 	return (str);
 }
 
+void	free_split(char **strs)
+{
+	int	i;
+
+	i = 0;
+	while (strs[i])
+	{
+		free(strs[i]);
+		i++;
+	}
+	free(strs);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**strs;
 	int		i;
 	int		j;
 
-	strs = malloc((count_words(s, c) + 1) * sizeof(char *));
 	i = 0;
 	j = 0;
+	strs = malloc((count_words(s, c) + 1) * sizeof(char *));
 	if (!strs)
 		return (NULL);
 	while (s[i])
 	{
 		if (s[i] != c && (i == 0 || s[i - 1] == c))
-			strs[j++] = new_word(&s[i], c);
+		{
+			strs[j] = new_word(&s[i], c);
+			if (!strs[j])
+				free_split(strs);
+			j++;
+		}
 		i++;
 	}
 	strs[j] = NULL;

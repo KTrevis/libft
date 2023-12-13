@@ -6,7 +6,7 @@
 /*   By: ketrevis <ketrevis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 17:53:37 by ketrevis          #+#    #+#             */
-/*   Updated: 2023/10/16 19:36:59 by ketrevis         ###   ########.fr       */
+/*   Updated: 2023/11/10 11:14:16 by ketrevis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	str = malloc((ft_strlen(s) + 1) * sizeof(char));
 	if (!str)
-		return (NULL);
+		return (str);
 	while (s[i])
 	{
 		str[i] = f(i, s[i]);

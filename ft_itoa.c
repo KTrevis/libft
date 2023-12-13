@@ -6,7 +6,7 @@
 /*   By: ketrevis <ketrevis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 18:14:40 by ketrevis          #+#    #+#             */
-/*   Updated: 2023/10/16 19:34:32 by ketrevis         ###   ########.fr       */
+/*   Updated: 2023/11/10 11:14:31 by ketrevis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,10 @@ char	*ft_itoa(int n)
 	long	nb;
 
 	i = nbr_len(n);
-	str = malloc((i + 1) * sizeof(char));
 	nb = (long)n;
+	str = malloc((i + 1) * sizeof(char));
 	if (!str)
-		return (NULL);
+		return (str);
 	str[i--] = '\0';
 	if (n == 0)
 		str[i] = '0';

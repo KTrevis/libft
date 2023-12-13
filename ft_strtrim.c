@@ -6,7 +6,7 @@
 /*   By: ketrevis <ketrevis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 18:12:02 by ketrevis          #+#    #+#             */
-/*   Updated: 2023/10/31 17:00:22 by ketrevis         ###   ########.fr       */
+/*   Updated: 2023/11/10 11:14:34 by ketrevis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,12 +50,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		i;
 	int		j;
 	int		k;
-	int size;
+	int		size;
 
 	size = get_size(s1, set) + 1;
 	if (size <= 0)
 		size = 1;
 	str = malloc(size * sizeof(char));
+	if (!str)
+		return (str);
 	i = ft_strlen(s1) - 1;
 	j = 0;
 	k = 0;
