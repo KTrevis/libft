@@ -6,11 +6,12 @@
 /*   By: ketrevis <ketrevis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 18:13:49 by ketrevis          #+#    #+#             */
-/*   Updated: 2023/12/04 15:55:28 by ketrevis         ###   ########.fr       */
+/*   Updated: 2023/12/16 21:08:24 by ketrevis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static int	count_words(char const *s, char c)
 {
@@ -60,6 +61,18 @@ void	free_split(char **strs)
 		i++;
 	}
 	free(strs);
+}
+
+void	print_split(char **strs)
+{
+	int	i;
+
+	i = 0;
+	while (strs[i])
+	{
+		printf("%s", strs[i]);
+		i++;
+	}
 }
 
 char	**ft_split(char const *s, char c)
