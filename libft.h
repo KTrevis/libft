@@ -6,7 +6,7 @@
 /*   By: ketrevis <ketrevis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 20:52:35 by ketrevis          #+#    #+#             */
-/*   Updated: 2023/12/09 11:27:03 by ketrevis         ###   ########.fr       */
+/*   Updated: 2023/12/16 20:49:58 by ketrevis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,5 +72,15 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 int		ft_lstsize(t_list *lst);
+
+int		ft_putchar_len(char c);
+int		ft_putstr_len(char *str);
+int		ft_putnbr_len(int n, unsigned int *len);
+int		ft_putaddr_len(void *ptr);
+int		ft_puthexa_unsigned_len(uintptr_t n, char c);
+int		ft_putnbr_unsigned_len(unsigned int n);
+int		ft_printf(const char *str, ...);
+char	ft_uppercase_char(char c);
+char	*ft_uppercase_str(char *str);
 
 #endif
