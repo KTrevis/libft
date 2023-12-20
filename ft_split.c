@@ -6,7 +6,7 @@
 /*   By: ketrevis <ketrevis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 18:13:49 by ketrevis          #+#    #+#             */
-/*   Updated: 2023/12/16 21:15:39 by ketrevis         ###   ########.fr       */
+/*   Updated: 2023/12/20 20:25:20 by ketrevis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,8 @@ void	print_split(char **strs)
 	int	i;
 
 	i = 0;
+	if (!strs)
+		return ;
 	while (strs[i])
 	{
 		ft_printf("%s\n", strs[i]);
