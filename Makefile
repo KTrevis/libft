@@ -17,10 +17,7 @@ CFLAGS =        -Wall -Wextra -Werror
 
 all: $(NAME)
 
-$(PRINTF):
-	make -C ft_printf
-
-$(NAME): $(OBJS) $(PRINTF)
+$(NAME): $(OBJS)
 	make -C ft_printf/
 	ar rc $(NAME) $(OBJS) $(PRINTF_OBJS)
 .c.o:
@@ -35,5 +32,6 @@ fclean:         clean
 	rm -rf $(NAME)
 
 re: fclean all
+	make -C ft_printf/ re
 
 .PHONY: all clean fclean re
