@@ -6,7 +6,7 @@
 /*   By: ketrevis <ketrevis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 18:13:49 by ketrevis          #+#    #+#             */
-/*   Updated: 2024/01/30 13:23:26 by ketrevis         ###   ########.fr       */
+/*   Updated: 2024/01/30 13:29:07 by ketrevis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	strs = malloc((count_words(s, c) + 1) * sizeof(char *));
+	strs = ft_calloc((count_words(s, c) + 1), sizeof(char *));
 	if (!strs)
 		return (NULL);
 	while (s[i])
