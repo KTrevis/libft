@@ -6,7 +6,7 @@
 /*   By: ketrevis <ketrevis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 18:13:49 by ketrevis          #+#    #+#             */
-/*   Updated: 2023/12/20 20:27:58 by ketrevis         ###   ########.fr       */
+/*   Updated: 2024/01/30 12:24:07 by ketrevis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static int	count_words(char const *s, char c)
 	return (words);
 }
 
-static char	*new_word(char const *s, char c)
+char	*new_word(char const *s, char c)
 {
 	int		i;
 	char	*str;
