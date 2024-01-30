@@ -10,7 +10,7 @@ PRINTF_OBJS = $(addprefix ft_printf/,$(PRINTF_SRCS:.c=.o))
 
 OBJS =          $(SRCS:.c=.o)
 OBJS_BONUS =    $(SRCS_BONUS:.c=.o)
-	NAME =          libft.a
+NAME =          libft.a
 
 PRINTF = ft_printf/libftprintf.a
 CFLAGS =        -Wall -Wextra -Werror
@@ -22,7 +22,8 @@ $(PRINTF):
 
 $(NAME): $(OBJS) $(PRINTF)
 	make -C ft_printf/
-	ar rc $(NAME) $(OBJS) $(PRINTF_OBJS)
+	ar rc $(NAME) $(OBJS) $(PRINTF)
+
 .c.o:
 	cc $(CFLAGS) -c $^
 
