@@ -6,9 +6,11 @@
 #    By: ketrevis <ketrevis@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/16 11:23:29 by ketrevis          #+#    #+#              #
-#    Updated: 2024/01/30 13:16:22 by ketrevis         ###   ########.fr        #
+#    Updated: 2023/12/16 20:54:47 by ketrevis         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+NAME = libftprintf.a
 
 SRC = ft_printf.c ft_putaddr_len.c ft_putchar_len.c ft_putnbr_len.c ft_putstr_len.c ft_strlen.c ft_uppercase.c
 
@@ -19,8 +21,9 @@ CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
-$(OBJS): $(SRC)
+$(NAME):
 	$(CC) $(CFLAGS) -c $(SRC)
+	ar -rc $(NAME) $(OBJS)
 
 clean:
 	rm -f $(OBJS_BONUS) $(OBJS) 

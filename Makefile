@@ -12,16 +12,17 @@ OBJS =          $(SRCS:.c=.o)
 OBJS_BONUS =    $(SRCS_BONUS:.c=.o)
 NAME =          libft.a
 
+PRINTF = ft_printf/libftprintf.a
 CFLAGS =        -Wall -Wextra -Werror
 
 all: $(NAME)
 
+$(NAME): $(OBJS) $(PRINTF)
+	ar rc $(NAME) $(OBJS) $(PRINTF_OBJS)
+
 $(PRINTF):
 	make -C ft_printf
 
-$(NAME): $(OBJS) $(PRINTF)
-	make -C ft_printf/
-	ar rc $(NAME) $(OBJS) $(PRINTF_OBS)
 
 .c.o:
 	cc $(CFLAGS) -c $^

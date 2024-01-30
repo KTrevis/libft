@@ -6,7 +6,7 @@
 /*   By: ketrevis <ketrevis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 20:52:35 by ketrevis          #+#    #+#             */
-/*   Updated: 2024/01/30 12:24:19 by ketrevis         ###   ########.fr       */
+/*   Updated: 2024/01/30 13:23:30 by ketrevis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strdup(const char *s);
 char	**ft_split(char const *s, char c);
-char	*new_word(char const *s, char c);
 
 void	*ft_memset(void *s, int c, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
@@ -82,6 +81,7 @@ int		ft_putaddr_len(void *ptr);
 int		ft_puthexa_unsigned_len(uintptr_t n, char c);
 int		ft_putnbr_unsigned_len(unsigned int n);
 int		ft_printf(const char *str, ...);
+char	*new_word(char const *s, char c);
 char	ft_uppercase_char(char c);
 char	*ft_uppercase_str(char *str);
 
